@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0"/>
+
+<title>Busquedas </title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+min-height:100vh;
+color:white;
+padding:40px;
+}
+
+.container{
+max-width:1400px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+margin-bottom:40px;
+font-size:3rem;
+color:#ff6b6b;
+}
+
+.formulario{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+margin-bottom:40px;
+display:flex;
+justify-content:center;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:10px;
+background:#3b82f6;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+.cards{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card h2{
+margin-bottom:20px;
+color:#ff6b6b;
+}
+
+.datos{
+margin-bottom:20px;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.resultado{
+line-height:1.8;
+color:#f8fafc;
+word-wrap:break-word;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1> BUSQUEDAS</h1>
+
+<form method="POST" class="formulario">
+
+<button type="submit">
+
+Ejecutar Busquedas
+
+</button>
+
+</form>
+
+<div class="cards">
+
+<!-- UCS -->
+
+<div class="card">
+
+<h2> Busqueda UCS</h2>
+
+<div class="datos">
+
+<b>Origen:</b> JILOYORK <br>
+<b>Destino:</b> MONTERREY
+
+</div>
+
+<div class="resultado">
+
+{{ resultado_ucs }}
+
+</div>
+
+</div>
+
+<!-- BFS -->
+
+<div class="card">
+
+<h2> Busqueda BFS</h2>
+
+<div class="datos">
+
+<b>Origen:</b> JILOYORK <br>
+<b>Destino:</b> OAXACA
+
+</div>
+
+<div class="resultado">
+
+{{ resultado_bfs }}
+
+</div>
+
+</div>
+
+<!-- DFS -->
+
+<div class="card">
+
+<h2> Puzzle DFS</h2>
+
+<div class="datos">
+
+<b>Inicial:</b> [4,2,3,1] <br>
+<b>Final:</b> [1,2,3,4]
+
+</div>
+
+<div class="resultado">
+
+{{ resultado_dfs }}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
